@@ -29,7 +29,7 @@
                 <div class="relative">
                     <select name="db_connection" onchange="this.form.submit()" 
                         class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-indigo-400 font-bold focus:outline-none focus:border-indigo-500 transition-all cursor-pointer appearance-none shadow-inner">
-                        <option value="mysql" {{ $selectedDb == 'mysql' ? 'selected' : '' }}>Student DB (mysql)</option>
+                        <option value="mysql" {{ $selectedDb == 'mysql' ? 'selected' : '' }} selected>Student DB (mysql)</option>
                         <option value="mysql_second" {{ $selectedDb == 'mysql_second' ? 'selected' : '' }}>Teacher DB (mysql_second)</option>
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
