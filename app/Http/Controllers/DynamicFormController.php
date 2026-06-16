@@ -22,7 +22,7 @@ class DynamicFormController extends Controller
         'db_connection' => 'required',
     ]);
 
-    //  $database = $request->db_connection;
+     $database = $request->db_connection;
 
       DB::connection($request->db_connection)->table('users')->insert([
         'name' => $request->name,
