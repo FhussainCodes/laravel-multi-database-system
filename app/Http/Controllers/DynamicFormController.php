@@ -40,4 +40,18 @@ class DynamicFormController extends Controller
         'User saved successfully in selected database.'
     );
 }
+
+public function displayUsers(Request $request)
+    {
+        // Agar request mein db_connection nahi hai to default 'mysql' select hoga
+        $selectedDb = $request->get('db_connection');
+
+        // Selected database se 'users' table ka saara data fetch karein
+        $users = DB::connection($selectedDb)->table('users')->get();
+
+        // Data ko blade view par pass karein saath mein selected DB bhi bheinjein
+        return view('display_users', compact('users', 'selectedDb'));
+    }
+
+
 }
