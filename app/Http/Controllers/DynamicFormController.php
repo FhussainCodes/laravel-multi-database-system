@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\Hash;
 
 class DynamicFormController extends Controller
 {
-    public function showForm()
+public function showForm()
     {
         return view('dynamic_form');
     }
 
-    public function storeData(Request $request)
+public function storeData(Request $request)
     {
      $request->validate([
         'name' => 'required',
@@ -49,5 +49,27 @@ public function displayUsers(Request $request)
 
         return view('display_users', compact('users_data', 'selectedDb'));
     }
+
+public function updatePassword(Request $request, $id)
+{
+
+    $newPassword = Str::password( 
+        $length = 20,
+        $letters = true,
+        $numbers = true,
+        $symbols = true,
+        $spaces = false
+        );   
+
+    DB::connection($request->db_connection)->table('users')->where('id', $id)->update([
+        'password' => Hash::make($newPassword),
+        'updated_at' => now(),
+    ]);
+
+    return back()->with(
+        'success', 
+        "Password rotated successfully for User #{$id}! New temporary raw password is: " . $newPassword
+    );
+}
     
 }
