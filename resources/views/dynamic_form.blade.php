@@ -54,12 +54,14 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div class="group">
                         <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Role</label>
-                        <input type="text" name="role" placeholder="admin, teacher..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all duration-300 transform hover:-translate-y-0.5">
+                        <input type="text" name="role" placeholder="student, teacher..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all duration-300 transform hover:-translate-y-0.5">
                     </div>
                     <div class="group">
                         <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Password</label>
                         <input type="password" name="password" placeholder="********" autocomplete="new-password" minlength="8" required class="w-full bg-slate-950/80 border @error('password') border-rose-500/80 @else border-slate-800 @enderror rounded-xl px-4 py-3 text-slate-200 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all duration-300 transform hover:-translate-y-0.5">
-                        @error('password') <p class="text-rose-400 text-xs mt-1.5 font-semibold animate-pulse">{{ $message }}</p> @enderror
+                        @error('password') 
+                        <p class="text-rose-400 text-xs mt-1.5 font-semibold animate-pulse">{{ $message }}</p>
+                         @enderror
                     </div>
                 </div>
 
