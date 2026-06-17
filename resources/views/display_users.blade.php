@@ -48,6 +48,7 @@
                         <th class="px-6 py-4">Email</th>
                         <th class="px-6 py-4">Role</th>
                         <th class="px-6 py-4 text-center">Identity Token/Status</th>
+                        <th class="px-6 py-4 text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-900/60 text-sm font-medium">
@@ -64,6 +65,18 @@
                             <td class="px-6 py-4 text-center font-mono text-xs text-slate-600 truncate max-w-[150px]">
                                 {{ $user->remember_token ? Str::limit($user->remember_token, 15) : 'No Token Set' }}
                             </td>
+                            <td class="px-6 py-4 text-center">
+                        <form action="{{ route('update.password', $user->id) }}" method="POST" class="inline-block">
+                            @csrf
+                            <input type="hidden" name="db_connection" value="{{ $selectedDb }}">
+                    
+                            <button type="submit" 
+                                onclick="return confirm('Are you sure you want to update password for this user?')"
+                                class="px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-lg bg-gradient-to-r from-amber-600 to-rose-600 hover:from-amber-500 hover:to-rose-500 text-white shadow-md shadow-rose-950/40 active:scale-95 transition-all cursor-pointer border-t border-white/10">
+                                Rotate Pass ⚡
+                            </button>
+                </form>
+            </td>
                         </tr>
                     @empty
                         <tr>
