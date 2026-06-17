@@ -29,8 +29,8 @@
                 <div class="relative">
                     <select name="db_connection" onchange="this.form.submit()" 
                         class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-indigo-400 font-bold focus:outline-none focus:border-indigo-500 transition-all cursor-pointer appearance-none shadow-inner">
-                        <option value="mysql" {{ $selectedDb == 'mysql' ? 'selected' : '' }} selected>Student DB (mysql)</option>
-                        <option value="mysql_second" {{ $selectedDb == 'mysql_second' ? 'selected' : '' }}>Teacher DB (mysql_second)</option>
+                        <option value="mysql" {{ $selectedDb == 'mysql' ? 'selected' : '' }} selected>Student DB </option>
+                        <option value="mysql_second" {{ $selectedDb == 'mysql_second' ? 'selected' : '' }}>Teacher DB </option>
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
                         <svg class="fill-current h-4 w-4" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -73,7 +73,7 @@
                             <button type="submit" 
                                 onclick="return confirm('Are you sure you want to update password for this user?')"
                                 class="px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-lg bg-gradient-to-r from-amber-600 to-rose-600 hover:from-amber-500 hover:to-rose-500 text-white shadow-md shadow-rose-950/40 active:scale-95 transition-all cursor-pointer border-t border-white/10">
-                                Rotate Pass ⚡
+                                Update Pass ⚡
                             </button>
                 </form>
             </td>

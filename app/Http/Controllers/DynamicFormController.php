@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DynamicFormController extends Controller
 {
@@ -28,7 +29,8 @@ public function storeData(Request $request)
         'name' => $request->name,
         'email' => $request->email,
         'role' => $request->role,
-        'password' => Hash::make($request->password),
+        // 'password' => Hash::make($request->password),
+        'password' => $request->password,
         'email_verified_at' => $request->email_verified_at,
         'remember_token' => $request->remember_token,
         'created_at' => now(),
