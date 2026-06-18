@@ -29,8 +29,7 @@ public function storeData(Request $request)
         'name' => $request->name,
         'email' => $request->email,
         'role' => $request->role,
-        // 'password' => Hash::make($request->password),
-        'password' => $request->password,
+        'password' => Hash::make($request->password),
         'email_verified_at' => $request->email_verified_at,
         'remember_token' => $request->remember_token,
         'created_at' => now(),
@@ -54,7 +53,6 @@ public function displayUsers(Request $request)
 
 public function updatePassword(Request $request, $id)
 {
-
     $newPassword = Str::password( 
         $length = 20,
         $letters = true,
