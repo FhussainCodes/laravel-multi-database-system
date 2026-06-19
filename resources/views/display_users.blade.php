@@ -8,7 +8,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        /* Modern Keyframe Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -29,7 +28,6 @@
         .ambient-glow {
             animation: pulseGlow 8s ease-in-out infinite;
         }
-        /* Custom 3D Perspective Context */
         .perspective-1000 {
             perspective: 1000px;
         }
