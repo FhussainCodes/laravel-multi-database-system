@@ -45,7 +45,6 @@ public function storeData(Request $request)
 public function displayUsers(Request $request)
     {
         $selectedDb = $request->db_connection;
-
         $users_data = DB::connection($selectedDb)->table('users')->get();
 
         return view('display_users', compact('users_data', 'selectedDb'));
@@ -71,5 +70,4 @@ public function updatePassword(Request $request, $id)
         "Password rotated successfully for User #{$id}! New temporary raw password is: " . $newPassword
     );
 }
-    
 }
