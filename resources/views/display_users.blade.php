@@ -6,7 +6,7 @@
     <title>Registered Users Records</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <style>
         @keyframes fadeInUp {
             from {
@@ -60,7 +60,7 @@
         </nav>
 
         <div class="bg-slate-900/40 backdrop-blur-xl p-6 md:p-8 rounded-3xl border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.4)] relative overflow-hidden">
-            
+
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-8 pb-6 border-b border-slate-800/60">
                 <div>
                     <h1 class="text-2xl font-black tracking-wide text-white flex items-center gap-2">
@@ -131,7 +131,6 @@
                                     <form action="{{ route('update.password', $user->id) }}" method="POST" class="inline-block">
                                         @csrf
                                         <input type="hidden" name="db_connection" value="{{ $selectedDb }}">
-                                
                                         <button type="submit" 
                                             onclick="return confirm('Are you sure you want to update password for this user?')"
                                             class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-xl bg-gradient-to-r from-amber-600 to-rose-600 hover:from-amber-500 hover:to-rose-500 text-white shadow-lg shadow-rose-950/50 active:scale-95 transform transition-all duration-200 cursor-pointer border-t border-white/20 hover:translate-y-[-1px]">
