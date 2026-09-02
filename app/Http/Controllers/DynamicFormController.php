@@ -15,7 +15,7 @@ public function showForm()
     }
 
 public function storeData(Request $request)
-    {
+{
      $request->validate([
         'name' => 'required',
         'email' => 'required|email',
