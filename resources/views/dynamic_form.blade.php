@@ -75,9 +75,7 @@
                         <input type="text" name="remember_token" placeholder="Optional" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all duration-300 transform hover:-translate-y-0.5">
                     </div>
                 </div>
-
                 <hr class="border-slate-800/80 my-4">
-
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Select Target Database</label>
                     <div class="relative">
