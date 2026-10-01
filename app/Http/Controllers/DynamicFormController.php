@@ -50,8 +50,7 @@ public function displayUsers(Request $request)
         return view('display_users', compact('users_data', 'selectedDb'));
     }
 
-public function updatePassword(Request $request, $id)
-{
+public function updatePassword(Request $request, $id){
     $newPassword = Str::password( 
         $length = 20,
         $letters = true,
