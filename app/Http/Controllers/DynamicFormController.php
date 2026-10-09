@@ -14,8 +14,7 @@ public function showForm()
         return view('dynamic_form');
     }
 
-public function storeData(Request $request)
-{
+public function storeData(Request $request){
      $request->validate([
         'name' => 'required',
         'email' => 'required|email',
