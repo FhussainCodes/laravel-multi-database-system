@@ -42,8 +42,7 @@ public function storeData(Request $request)
     );
 }
 
-public function displayUsers(Request $request)
-    {
+public function displayUsers(Request $request){
         $selectedDb = $request->db_connection;
         $users_data = DB::connection($selectedDb)->table('users')->get();
 
