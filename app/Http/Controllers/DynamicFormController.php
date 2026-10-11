@@ -34,7 +34,6 @@ public function storeData(Request $request){
         'created_at' => now(),
         'updated_at' => now(),
     ]);
-
     return back()->with(
         'success',
         'User saved successfully in selected database.'
