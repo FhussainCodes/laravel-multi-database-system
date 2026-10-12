@@ -45,7 +45,7 @@ public function displayUsers(Request $request){
         $users_data = DB::connection($selectedDb)->table('users')->get();
 
         return view('display_users', compact('users_data', 'selectedDb'));
-    }
+}
 
 public function updatePassword(Request $request, $id){
     $newPassword = Str::password( 
