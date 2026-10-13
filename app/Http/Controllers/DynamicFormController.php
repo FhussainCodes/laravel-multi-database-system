@@ -9,8 +9,7 @@ use Illuminate\Support\Str;
 
 class DynamicFormController extends Controller
 {
-public function showForm()
-    {
+public function showForm(){
         return view('dynamic_form');
     }
 
