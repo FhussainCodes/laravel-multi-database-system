@@ -158,7 +158,7 @@
         </div>
     </div>
 
-    <script>
+ <script>
         lucide.createIcons();
     </script>
 </body>
