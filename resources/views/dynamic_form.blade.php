@@ -39,7 +39,6 @@
 
             <form action="{{ route('store.form') }}" method="POST" autocomplete="off" class="space-y-6">
                 @csrf
-
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div class="group">
                         <label class="block text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Name</label>
