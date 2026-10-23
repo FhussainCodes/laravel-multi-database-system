@@ -60,7 +60,6 @@
         </nav>
 
         <div class="bg-slate-900/40 backdrop-blur-xl p-6 md:p-8 rounded-3xl border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.4)] relative overflow-hidden">
-
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-8 pb-6 border-b border-slate-800/60">
                 <div>
                     <h1 class="text-2xl font-black tracking-wide text-white flex items-center gap-2">
