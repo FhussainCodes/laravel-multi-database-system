@@ -39,7 +39,6 @@
     <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none ambient-glow" style="animation-delay: -4s;"></div>
 
     <div class="max-w-5xl mx-auto space-y-6 animate-fade-in-up">
-
         <nav class="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl px-6 py-4 shadow-[0_15px_35px_rgba(0,0,0,0.4)] flex justify-between items-center transform hover:translate-y-[-2px] hover:shadow-[0_20px_40px_rgba(99,102,241,0.15)] transition-all duration-300">
             <div class="flex items-center gap-3">
                 <div class="p-2 bg-indigo-500/10 border border-indigo-500/20 rounded-xl">
